@@ -4,7 +4,8 @@
  */
 
 fn main() {
-    let mut s = String::from("hello world");
+    let my_string = String::from("hello world");
+
     // `first_word` works on slices of `String`s, whether partial or whole
     let word = first_word(&my_string[0..6]);
     let word = first_word(&my_string[..]);
@@ -31,5 +32,6 @@ fn first_word(s: &String) -> &str {
             return &s[0..i];
         }
     }
+
     &s[..]
 }
